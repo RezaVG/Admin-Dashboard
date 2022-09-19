@@ -129,15 +129,61 @@ table {
 }
 
 /* CSS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
 
 body {
   display: grid;
   grid-template-columns: 1fr 5fr;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: #eff6ff;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .sidebar {
   grid-row: span 2;
   display: grid;
+  gap: 2.5rem;
+  align-content: start;
+  background-color: #0284c7;
+  color: white;
+  padding: 1rem;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.sidebar img {
+  margin-right: 1rem;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.dash-title {
+  display: flex;
+  align-items: center;
 }
 
 header {
@@ -165,4 +211,27 @@ main {
 
 article {
   grid-row: 1/-1;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.card {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-buttons {
+  display: flex;
+
+  gap: 1rem;
+  align-self: end;
+}
+
+.card > p {
+  flex: 1;
 }
