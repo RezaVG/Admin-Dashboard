@@ -140,6 +140,7 @@ body {
   height: 100vh;
   font-family: "Roboto", sans-serif;
   background-color: #d8e1ec;
+  line-height: 1.25rem;
 }
 
 h1 {
@@ -155,6 +156,7 @@ h3 {
 h4 {
   font-weight: 700;
   font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .sidebar {
@@ -284,8 +286,9 @@ header {
 main {
   grid-column: 2/3;
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template: 1fr 1fr/3fr 1fr;
+  gap: 1rem;
+  padding: 2rem;
 }
 
 article {
@@ -294,19 +297,28 @@ article {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(30ch, 45%));
+  justify-content: start;
   gap: 15px;
+  margin-top: 1rem;
 }
 
 .card {
   height: 150px;
   display: flex;
   flex-direction: column;
+  background-color: white;
+  border-radius: 0.5rem;
+  border-left: 0.5rem solid #f0b429;
+  padding: 2rem 1rem;
 }
 
-.card-buttons {
-  display: flex;
+.card p {
+  color: rgb(58, 58, 58);
+}
 
+.card-links {
+  display: flex;
   gap: 1rem;
   align-self: end;
 }
