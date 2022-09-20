@@ -159,6 +159,7 @@ h4 {
   display: grid;
   gap: 2.5rem;
   align-content: start;
+
   background-color: #0284c7;
   color: white;
   padding: 1rem;
@@ -172,18 +173,17 @@ h4 {
 }
 
 .sidebar img {
-  margin-right: 1rem;
+  justify-self: center;
 }
 
-.sidebar li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
+.sidebar li,
 .dash-title {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  justify-items: start;
   align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 header {
