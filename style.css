@@ -131,17 +131,20 @@ table {
 /* CSS */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
 
+:root {
+  font-size: 14px;
+}
 body {
   display: grid;
   grid-template-columns: 1fr 5fr;
   height: 100vh;
   font-family: "Roboto", sans-serif;
-  background-color: #eff6ff;
+  background-color: #d8e1ec;
 }
 
 h1 {
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 h3 {
@@ -189,17 +192,93 @@ h4 {
 header {
   grid-column: 2/3;
   display: grid;
+  background-color: white;
+  padding: 1rem 2rem;
 }
 
 .header-top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header-top-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header-top-right > img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  gap: 1rem;
+}
+
+.search-container input {
+  flex: 1;
+  border-radius: 0.75rem;
+  border: none;
+  background-color: #d8e1ec;
+  height: 1.5rem;
 }
 
 .header-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.user-info {
+  display: grid;
+  grid-template-areas:
+    "img p"
+    "img h1";
+  gap: 1rem;
+}
+
+.user-info > img {
+  grid-area: img;
+  width: 48px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.user-info > p {
+  grid-area: p;
+}
+
+.user-info > h1 {
+  grid-area: h1;
+}
+
+.header-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.header-buttons > button {
+  background: #0284c7;
+  border-radius: 999px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  word-break: break-word;
+  border: 0;
 }
 
 main {
