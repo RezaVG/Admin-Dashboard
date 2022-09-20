@@ -137,10 +137,11 @@ table {
 body {
   display: grid;
   grid-template-columns: 1fr 5fr;
-  height: 100vh;
+  grid-template-rows: 1fr calc(100vh -1fr);
   font-family: "Roboto", sans-serif;
   background-color: #d8e1ec;
   line-height: 1.25rem;
+  align-items: start;
 }
 
 h1 {
@@ -161,10 +162,12 @@ h4 {
 
 .sidebar {
   grid-row: span 2;
+  height: 100vh;
+  position: sticky;
+  top: 0;
   display: grid;
   gap: 2.5rem;
   align-content: start;
-
   background-color: #0284c7;
   color: white;
   padding: 1rem;
@@ -196,6 +199,8 @@ header {
   display: grid;
   background-color: white;
   padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
 }
 
 .header-top {
@@ -287,8 +292,10 @@ main {
   grid-column: 2/3;
   display: grid;
   grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto 1fr;
   gap: 1rem;
   padding: 2rem;
+  align-items: start;
 }
 
 article {
@@ -370,6 +377,7 @@ article {
     "img p";
   justify-items: center;
   align-items: center;
+  gap: 0.25rem;
   margin-bottom: 2rem;
 }
 
