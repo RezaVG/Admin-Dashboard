@@ -297,7 +297,7 @@ article {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30ch, 45%));
+  grid-template-columns: repeat(auto-fit, minmax(35ch, 47%));
   justify-content: start;
   gap: 15px;
   margin-top: 1rem;
@@ -315,6 +315,7 @@ article {
 
 .card p {
   color: rgb(58, 58, 58);
+  overflow: hidden;
 }
 
 .card-links {
@@ -325,4 +326,27 @@ article {
 
 .card > p {
   flex: 1;
+}
+
+.announcements {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem 0 1rem;
+  margin-top: 1rem;
+}
+
+.announcements > *:not(:last-child) {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgb(146, 146, 146);
+}
+
+.announcement-title {
+  font-size: 1rem;
+  margin: 0;
+}
+.announcement-card p {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgb(58, 58, 58);
+  padding-bottom: 1rem;
 }
